@@ -3,5 +3,7 @@
 
     <string name="app_name">Skytrain Vancouver</string>
     <string name="hello_world">Hello world!</string>
+    <string name="splash_title_msg">Welcome to (Our App Name)</string>
+    <string name="splash_names_msg">Developed By : (Our names...)</string>
 
 </resources>

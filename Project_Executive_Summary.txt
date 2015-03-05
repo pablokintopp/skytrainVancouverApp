@@ -1,0 +1,11 @@
+CSIS3175 W15 Project
+
+In this final project for 3175, your team is to design a Skytrain app.  In project 1, you had examined various apps that deal with the transit issues and their features, you may want to consider if some of those features can be implemented in your own app.  Obviously you are not going to “steal” someone’s ideas and simply put them into your app.  You are instead to consider how you can differentiate your final product with better features from the ones that you have evaluated.
+
+Your app is mainly targeting the visitors to our cities.  They may have little knowledge about the Skytrain system.  At the very least, your app must be able to help users to go from point A to point B on the Skytrain network (Expo, Millennium, Canada Line, and Ever Green), the shortest route with all the stations listed, fare amount, travel time, possible points of interest at the destination, etc.  While you are free to add additional language support but an English version will be sufficient.
+
+You can use whatever resources available to help you design this app except you cannot hire outside help.  This app must be running on an Android device.  To make it simple for you, you can specify if it can run on a particular device (e.g. 8” tablet or 5” smartphone).  No need to make it universal on all Android devices.  Your app will eventually be posted put on the Google Play for others to try out.  Therefore be careful with copyright issues.
+
+You should complete your initial screen design by the end of Feb and do all the necessary coding in March.  Students in the Tues section will present their app on April 7th.  Students in the Friday section will present their app on April 10th.
+
+This project will carry 20% of the course final grade.

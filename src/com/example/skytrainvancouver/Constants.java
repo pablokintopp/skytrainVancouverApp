@@ -203,6 +203,7 @@ public class Constants {
 		stations.add(new Station("Gateway", new String[]{LINE_EXPO}, 3));
 		stations.add(new Station("Surrey Central", new String[]{LINE_EXPO}, 3));
 		stations.add(new Station("King George", new String[]{LINE_EXPO}, 3));
+		
 		stations.add(new Station("Sapperton", new String[]{LINE_MILLENIUM}, 2));
 		stations.add(new Station("Braid", new String[]{LINE_MILLENIUM}, 2));
 		stations.add(new Station("Lougheed Town Centre", new String[]{LINE_MILLENIUM, LINE_EVERGREEN}, 2));
@@ -215,6 +216,7 @@ public class Constants {
 		stations.add(new Station("Rupert", new String[]{LINE_MILLENIUM}, 1));
 		stations.add(new Station("Renfrew", new String[]{LINE_MILLENIUM}, 1));
 		stations.add(new Station("VCC-Clark", new String[]{LINE_MILLENIUM}, 1));
+		
 		stations.add(new Station("Vancouver City Centre", new String[]{LINE_CANADA}, 1));
 		stations.add(new Station("Yaletown Roundhouse", new String[]{LINE_CANADA}, 1));
 		stations.add(new Station("Olympic Village", new String[]{LINE_CANADA}, 1));
@@ -230,6 +232,14 @@ public class Constants {
 		stations.add(new Station("Templeton", new String[]{LINE_CANADA}, 0));
 		stations.add(new Station("Sea Island Centre", new String[]{LINE_CANADA}, 0));
 		stations.add(new Station("YVR Airport", new String[]{LINE_CANADA}, 0));
+		
+		stations.add(new Station("Burquitlam", new String[]{LINE_EVERGREEN}, 3));
+		stations.add(new Station("Port Moody", new String[]{LINE_EVERGREEN}, 3));
+		stations.add(new Station("Inlet Centre", new String[]{LINE_EVERGREEN}, 3));
+		stations.add(new Station("Coquitlam", new String[]{LINE_EVERGREEN}, 3));
+		stations.add(new Station("Douglas Lincoln", new String[]{LINE_EVERGREEN}, 3));
+		
+		//TODO add Evergreen line stations.
 	}
 	
 	

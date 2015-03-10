@@ -1,6 +1,17 @@
 package com.example.skytrainvancouver;
 
+import java.util.ArrayList;
+
 public class Constants {
+	
+	public static ArrayList<Station> stations = new ArrayList<>();
+	
+	/*          VANCOUVER SKYTRAIN LINES           */
+	public static String LINE_EXPO = "Expo Line";
+	public static String LINE_MILLENIUM = "Millenium Line";
+	public static String LINE_CANADA = "Canada Line";
+	public static String LINE_EVERGREEN = "Evergreen Line";
+	
 	//**** Each station is going to be a position in the matrix ****//
 	public static int WATERFRONT = 0; // * 1 32
 	public static int BURRARD = 1;
@@ -169,6 +180,57 @@ public class Constants {
 		{40,38,37,36,34,31,34,35,35,33,32,30,27,25,21,20,23,26,27,29,17,15,12,14,17,19,21,23,24,27,28,32,42,44,46,47,49,52,54,57,59,61,63,65,74,76,78,10,5,3,0,3},
 		{43,41,40,39,37,34,37,38,38,36,35,33,30,28,24,23,26,29,30,32,20,18,15,17,20,22,24,26,27,30,31,35,45,47,49,50,52,55,57,60,62,64,66,68,77,79,81,13,8,6,3,0},
 		};
+	
+	public void initStations(){
+		
+		stations.add(new Station("Waterfront", new String[]{LINE_MILLENIUM,LINE_EXPO,LINE_CANADA}, 1));
+		stations.add(new Station("Burrard", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Granville", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Stadium Chinatown", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Main Street Science World", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Commercial Broadway", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Nanaimo", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("29th Avenue", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Joyce Collingwood", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
+		stations.add(new Station("Patterson", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("Metrotown", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("Royal Oak", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("Edmonds", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("22nd Street", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("New Westminster", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("Columbia", new String[]{LINE_MILLENIUM,LINE_EXPO}, 2));
+		stations.add(new Station("Scott Road", new String[]{LINE_EXPO}, 3));
+		stations.add(new Station("Gateway", new String[]{LINE_EXPO}, 3));
+		stations.add(new Station("Surrey Central", new String[]{LINE_EXPO}, 3));
+		stations.add(new Station("King George", new String[]{LINE_EXPO}, 3));
+		stations.add(new Station("Sapperton", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Braid", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Lougheed Town Centre", new String[]{LINE_MILLENIUM, LINE_EVERGREEN}, 2));
+		stations.add(new Station("Production Way University", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Lake City Way", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Sperling Burnaby Lake", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Holdom", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Brentwood Town Centre", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Gilmore", new String[]{LINE_MILLENIUM}, 2));
+		stations.add(new Station("Rupert", new String[]{LINE_MILLENIUM}, 1));
+		stations.add(new Station("Renfrew", new String[]{LINE_MILLENIUM}, 1));
+		stations.add(new Station("VCC-Clark", new String[]{LINE_MILLENIUM}, 1));
+		stations.add(new Station("Vancouver City Centre", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Yaletown Roundhouse", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Olympic Village", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Broadway City Hall", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("King Edward", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Oakridge 41st", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Langara 49th", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Marine Drive", new String[]{LINE_CANADA}, 1));
+		stations.add(new Station("Bridgeport", new String[]{LINE_CANADA}, 2));
+		stations.add(new Station("Aberdeen", new String[]{LINE_CANADA}, 2));
+		stations.add(new Station("Lansdowne", new String[]{LINE_CANADA}, 2));
+		stations.add(new Station("Richmond Brighouse", new String[]{LINE_CANADA}, 2));
+		stations.add(new Station("Templeton", new String[]{LINE_CANADA}, 0));
+		stations.add(new Station("Sea Island Centre", new String[]{LINE_CANADA}, 0));
+		stations.add(new Station("YVR Airport", new String[]{LINE_CANADA}, 0));
+	}
 	
 	
 }

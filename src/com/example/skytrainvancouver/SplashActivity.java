@@ -17,12 +17,14 @@ public class SplashActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash_screen);
 		
+		Constants.initStations();
+		
         TimerTask task = new TimerTask() {
 			
 			@Override
 			public void run() {
 				finish();
-				startActivity(new Intent(SplashActivity.this, MainActivity.class ));
+				startActivity(new Intent(SplashActivity.this, ShortPathStations.class ));
 				
 			}
 		};

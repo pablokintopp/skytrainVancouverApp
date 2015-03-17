@@ -6,6 +6,8 @@ public class Constants {
 	
 	public static ArrayList<Station> stations = new ArrayList<>();
 	
+	public static int  NUM_STATIONS= 52;
+	
 	/*          VANCOUVER SKYTRAIN LINES           */
 	public static String LINE_EXPO = "Expo Line";
 	public static String LINE_MILLENIUM = "Millenium Line";
@@ -73,8 +75,7 @@ public class Constants {
 	public static int  DOUGLAS_LINCOLN= 51;
 	
 	//****************************************************//
-	
-	public static final int TIMES_MATRIX[][] = {{0,2,3,4,6,9,12,13,15,17,18,20,23,25,29,30,33,36,37,39,33,31,28,26,23,21,19,17,16,13,12,10,2,4,6,7,9,12,14,17,19,21,23,25,34,36,38,30,35,37,40,43},
+	public static  int TIMES_MATRIX[][] = {{0,2,3,4,6,9,12,13,15,17,18,20,23,25,29,30,33,36,37,39,33,31,28,26,23,21,19,17,16,13,12,10,2,4,6,7,9,12,14,17,19,21,23,25,34,36,38,30,35,37,40,43},
 		{2,0,1,2,4,7,10,11,13,15,16,18,21,23,27,28,31,34,35,37,31,29,26,24,21,19,17,15,14,11,10,8,4,6,8,9,11,14,16,19,21,23,25,27,36,38,40,28,33,35,38,41},
 		{3,1,0,1,3,6,9,10,12,14,15,17,20,22,26,27,30,33,34,36,30,28,25,23,20,18,16,14,13,10,9,7,5,7,9,10,12,15,17,20,22,24,26,28,37,39,41,27,32,34,37,40},
 		{4,2,1,0,2,5,8,9,11,13,14,16,19,21,25,26,29,32,33,35,29,27,24,22,19,17,15,13,12,9,8,6,6,8,10,11,13,16,18,21,23,25,27,29,38,40,42,26,31,33,36,39},
@@ -181,7 +182,7 @@ public class Constants {
 		{43,41,40,39,37,34,37,38,38,36,35,33,30,28,24,23,26,29,30,32,20,18,15,17,20,22,24,26,27,30,31,35,45,47,49,50,52,55,57,60,62,64,66,68,77,79,81,13,8,6,3,0},
 		};
 	
-	public void initStations(){
+	public static void initStations(){
 		
 		stations.add(new Station("Waterfront", new String[]{LINE_MILLENIUM,LINE_EXPO,LINE_CANADA}, 1));
 		stations.add(new Station("Burrard", new String[]{LINE_MILLENIUM,LINE_EXPO}, 1));
@@ -240,6 +241,10 @@ public class Constants {
 		stations.add(new Station("Douglas Lincoln", new String[]{LINE_EVERGREEN}, 3));
 		
 		//TODO add Evergreen line stations.
+	}
+	public static int getTime(int i, int j){
+		
+		return TIMES_MATRIX[i][j];
 	}
 	
 	

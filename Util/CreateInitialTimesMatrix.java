@@ -63,6 +63,7 @@ public static int PATH_MATRIX[][] = new int[NUM_STATIONS][NUM_STATIONS];
             
          }
          System.out.println();
+         System.out.println();
       }  
     System.out.println("PATH_MATRIX");  
     for(int i = 0 ; i< NUM_STATIONS ; i++){

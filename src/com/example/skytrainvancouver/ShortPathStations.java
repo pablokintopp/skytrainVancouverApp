@@ -1,5 +1,7 @@
 package com.example.skytrainvancouver;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.gesture.OrientedBoundingBox;
 import android.os.Bundle;
@@ -60,6 +62,25 @@ public class ShortPathStations extends Activity {
 		int col = destiny.getSelectedItemPosition();
 		
 		loadTime(line, col); // we need the time as well
+		
+		//ArrayList<Station> pathStation = new ArrayList<Station>(); 
+		
+		String path ="";
+		Station station;
+		int i = 0;
+		do{
+			//pathStation.add(Constants.stations.get(line));
+			station = Constants.stations.get(line);
+			path+= station.getName()+"\n";
+			line = Constants.PATH_MATRIX[line][col];
+			i++;
+			
+		}while(line != col);
+		if(i>1){
+			station = Constants.stations.get(line);
+			path+= station.getName()+"\n";
+		}
+		txtPath.setText(path);
 		
 		
 	}

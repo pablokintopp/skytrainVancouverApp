@@ -39,7 +39,7 @@ public static int  NUM_STATIONS= 52;
          for(int j = 0; j< NUM_STATIONS ;j++){
             if(j>0)
                System.out.print(",");
-            System.out.print(TIMES_MATRIX[i][j]);
+            System.out.print(PATH_MATRIX[i][j]);
          }
          System.out.println("},");
       }

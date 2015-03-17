@@ -23,7 +23,6 @@ public class ShortPathStations extends Activity {
 		origin = (Spinner) findViewById(R.id.spinnerOriginStation);
 		destiny = (Spinner) findViewById(R.id.spinnerDestinyStation);
 		
-		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_spinner_item, loadStationNames());
 		
@@ -54,11 +53,21 @@ public class ShortPathStations extends Activity {
 	}
 	
 	public void loadPath(View v){
-		TextView time = (TextView) findViewById(R.id.textTime);
-		TextView path = (TextView) findViewById(R.id.TextPath);
+		
+		TextView txtPath = (TextView) findViewById(R.id.TextPath);
 		
 		int line = origin.getSelectedItemPosition();
-		int colunm = destiny.getSelectedItemPosition();
-		//time.setText(Constants.getTime(line, colunm));
+		int col = destiny.getSelectedItemPosition();
+		
+		loadTime(line, col); // we need the time as well
+		
+		
+	}
+	
+	public void loadTime(int line, int col){
+		TextView txtTime = (TextView) findViewById(R.id.textTime);
+		int timeInt = Constants.TIMES_MATRIX[line][col];
+		String time ="Approximately "+timeInt+" Minutes"; //  textView just allows string
+		txtTime.setText(time);
 	}
 }

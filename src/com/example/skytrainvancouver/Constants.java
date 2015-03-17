@@ -242,10 +242,6 @@ public class Constants {
 		
 		//TODO add Evergreen line stations.
 	}
-	public static int getTime(int i, int j){
-		
-		return TIMES_MATRIX[i][j];
-	}
 	
 	
 }

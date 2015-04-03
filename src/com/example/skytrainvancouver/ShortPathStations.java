@@ -3,6 +3,7 @@ package com.example.skytrainvancouver;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.gesture.OrientedBoundingBox;
 import android.os.Bundle;
 import android.view.View;
@@ -53,42 +54,22 @@ public class ShortPathStations extends Activity {
 		return stations;
 		
 	}
-	
-	public void loadPath(View v){
+	public void loadResultActivity(View v){
 		
-		TextView txtPath = (TextView) findViewById(R.id.TextPath);
+		Intent i = new Intent(ShortPathStations.this,PathResult.class);
+		
 		
 		int line = origin.getSelectedItemPosition();
 		int col = destiny.getSelectedItemPosition();
 		
-		loadTime(line, col); // we need the time as well
+		i.putExtra("origin", line);
+		i.putExtra("destination", col);
 		
-		//ArrayList<Station> pathStation = new ArrayList<Station>(); 
-		
-		String path ="";
-		Station station;
-		int i = 0;
-		do{
-			//pathStation.add(Constants.stations.get(line));
-			station = Constants.stations.get(line);
-			path+= station.getName()+"\n";
-			line = Constants.PATH_MATRIX[line][col];
-			i++;
-			
-		}while(line != col);
-		if(i>1){
-			station = Constants.stations.get(line);
-			path+= station.getName()+"\n";
-		}
-		txtPath.setText(path);
-		
+		startActivity(i);
 		
 	}
 	
-	public void loadTime(int line, int col){
-		TextView txtTime = (TextView) findViewById(R.id.textTime);
-		int timeInt = Constants.TIMES_MATRIX[line][col];
-		String time ="Approximately "+timeInt+" Minutes"; //  textView just allows string
-		txtTime.setText(time);
-	}
+	
+	
+
 }

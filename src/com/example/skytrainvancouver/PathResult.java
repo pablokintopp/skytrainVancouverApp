@@ -28,14 +28,16 @@ public class PathResult extends ListActivity {
 		origin = b.getInt("origin");
 		destination = b.getInt("destination");
 		
+		//ListView stationsText = (ListView) findViewById(R.id.listStations);
 		
+
 		loadPath(origin, destination);
 
 //		
     	//time.setText("Estimated Time : ");
 //		
 		//String listViewData[] = {"test","tesst","test","test5","test5"};
-		setListAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,loadStationNames()) );
+		setListAdapter(new ArrayAdapter<String>(this,R.layout.activity_result_path,R.id.textViewTest,loadStationNames()) );
 //	 
 	}
 	

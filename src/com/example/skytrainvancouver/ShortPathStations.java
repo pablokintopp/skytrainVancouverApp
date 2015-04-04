@@ -1,22 +1,23 @@
 package com.example.skytrainvancouver;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.gesture.OrientedBoundingBox;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebStorage.Origin;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Spinner;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class ShortPathStations extends Activity {
 
 	
 	Spinner origin;
-	Spinner destiny;
+	Spinner destination;
+	String stations[];
+	AutoCompleteTextView actvO , actvD;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +25,51 @@ public class ShortPathStations extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.short_path_stations);
 		origin = (Spinner) findViewById(R.id.spinnerOriginStation);
-		destiny = (Spinner) findViewById(R.id.spinnerDestinyStation);
+		destination = (Spinner) findViewById(R.id.spinnerDestinyStation);
+		stations = loadStationNames();
 		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, loadStationNames());
+				android.R.layout.simple_spinner_item, stations);
 		
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		
 		origin.setAdapter(dataAdapter);
 		
-		destiny.setAdapter(dataAdapter);
+		destination.setAdapter(dataAdapter);
+		
+		ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1,stations);
+		
+		 actvO = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewOrigin);
+		 actvD = (AutoCompleteTextView) findViewById(R.id.AutoCompleteTextViewDestination);
+		
+		actvO.setAdapter(adapter);
+		actvD.setAdapter(adapter);
+		
+		actvO.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				int index = searchStation(actvO.getText().toString());
+				if(index>=0)
+					origin.setSelection(index);
+			}
+		
+		});
+		
+		actvD.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				int index = searchStation(actvD.getText().toString());
+				if(index>=0)
+					destination.setSelection(index);
+					
+			}
+		
+		});
 		
 		
 	
@@ -56,16 +92,29 @@ public class ShortPathStations extends Activity {
 	}
 	public void loadResultActivity(View v){
 		
+
 		Intent i = new Intent(ShortPathStations.this,PathResult.class);
 		
 		
 		int line = origin.getSelectedItemPosition();
-		int col = destiny.getSelectedItemPosition();
+		int col = destination.getSelectedItemPosition();
 		
 		i.putExtra("origin", line);
 		i.putExtra("destination", col);
 		
 		startActivity(i);
+		
+	}
+	
+	public int searchStation(String  name){
+		
+		for(int i = 0; i< stations.length ; i++){
+			if(name.equals(stations[i]))
+				return i;
+			
+		}
+		
+		return -1;
 		
 	}
 	

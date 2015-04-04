@@ -6,14 +6,6 @@
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 
-    <Spinner
-        android:id="@+id/spinnerOriginStation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="57dp" />
-
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
@@ -21,8 +13,16 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:text="Select Origin"
+        android:text="Search or Select Origin"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinnerOriginStation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginTop="66dp" />
 
     <TextView
         android:id="@+id/fareZone"
@@ -30,24 +30,48 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinnerOriginStation"
         android:layout_centerHorizontal="true"
-        android:text="Select Destiny"
+        android:text="Search or Select Destination"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Spinner
         android:id="@+id/spinnerDestinyStation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/fareZone"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="83dp" />
 
     <Button
         android:id="@+id/buttonSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinnerDestinyStation"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
         android:onClick="loadResultActivity"
-        android:text="Search" />
+        android:text="Show" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextViewOrigin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="Search origin here" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/AutoCompleteTextViewDestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewName"
+        android:layout_below="@+id/fareZone"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Search Destination" />
 
 </RelativeLayout>

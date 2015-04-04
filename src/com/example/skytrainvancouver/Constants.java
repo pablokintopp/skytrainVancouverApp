@@ -249,6 +249,31 @@ public class Constants {
 		stations.get(NEW_WEST).getPoints().add(new InterestPoint(R.drawable.p_douglas_college,"Douglas College"));
 		stations.get(NEW_WEST).getPoints().add(new InterestPoint(R.drawable.p_old_station,"Old Station New Westminster"));
 		stations.get(NEW_WEST).getPoints().add(new InterestPoint(R.drawable.p_new_west_heritage_preservation,"Heritage Preservation"));
+
+		stations.get(WATERFRONT).getPoints().add(new InterestPoint(R.drawable.p_waterfront_station,"Waterfront Station"));
+		
+		stations.get(BURRARD).getPoints().add(new InterestPoint(R.drawable.p_burrard_station,"Burrard Station"));
+		stations.get(BURRARD).getPoints().add(new InterestPoint(R.drawable.p_burrard_bridge,"Burrard Bridge"));
+		
+		stations.get(GRANVILLE).getPoints().add(new InterestPoint(R.drawable.p_pacific_center,"Pacific Center"));
+		stations.get(GRANVILLE).getPoints().add(new InterestPoint(R.drawable.p_joes_apartament,"Joe's Apartament"));
+		
+		stations.get(CHINATOWN).getPoints().add(new InterestPoint(R.drawable.p_bc_place,"BC Place"));
+		stations.get(CHINATOWN).getPoints().add(new InterestPoint(R.drawable.p_chinatown_station,"Stadium-Chinatown Station"));
+		
+		stations.get(MAINSTREET).getPoints().add(new InterestPoint(R.drawable.p_pacific_central,"Pacific Central"));
+		stations.get(MAINSTREET).getPoints().add(new InterestPoint(R.drawable.p_science_world,"Science World"));
+		
+		stations.get(COMMERCIAL).getPoints().add(new InterestPoint(R.drawable.p_commercial_station,"Commercial Brodway Station"));
+		stations.get(COMMERCIAL).getPoints().add(new InterestPoint(R.drawable.p_commercial_driver_street,"Commercial Drive Street"));
+		
+		stations.get(NANAIMO).getPoints().add(new InterestPoint(R.drawable.p_nanaimo_station,"Nanaimo Station"));
+		stations.get(NANAIMO).getPoints().add(new InterestPoint(R.drawable.p_nanaimo_street,"Nanaimo Street"));
+		
+		stations.get(_29AVENUE).getPoints().add(new InterestPoint(R.drawable.p_29th_station,"29th Avenue Station"));
+		
+		stations.get(JOYCE).getPoints().add(new InterestPoint(R.drawable.p_joyce,"Joyce-Collingwood Station"));
+		stations.get(JOYCE).getPoints().add(new InterestPoint(R.drawable.p_vanness_ave,"Joyce-Collingwood Station at Vanness Avenuew"));
 		
 	}
 	

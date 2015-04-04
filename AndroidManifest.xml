@@ -25,6 +25,7 @@
         <activity android:name="MainActivity"></activity>
         <activity android:name="ShortPathStations"></activity>
         <activity android:name="PathResult"></activity>
+        <activity android:name="StationActivity"></activity>
     </application>
 
 </manifest>

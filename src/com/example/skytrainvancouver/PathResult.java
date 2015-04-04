@@ -3,10 +3,13 @@ package com.example.skytrainvancouver;
 import java.util.ArrayList;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PathResult extends ListActivity {
 	ArrayList<Station> pathStation; ;
@@ -80,6 +83,18 @@ public void loadPath(int line, int col){
 		return stations;
 		
 		
+	}
+	
+	protected void onListItemClick(ListView l, View v, int position, long id){
+		
+		Intent i = new Intent(PathResult.this,StationActivity.class);
+		
+		
+		int idStation = pathStation.get(position).getId();
+		
+		i.putExtra("id", idStation);
+		
+		startActivity(i);
 	}
 	
 

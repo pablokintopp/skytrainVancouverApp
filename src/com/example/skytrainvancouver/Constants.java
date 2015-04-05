@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Constants {
 	
-	public static ArrayList<Station> stations = new ArrayList<>();
+	public static ArrayList<Station> stations = new ArrayList<Station>();
 	
 	public static int  NUM_STATIONS= 52;
 	
@@ -266,6 +266,7 @@ public class Constants {
 		
 		stations.get(COMMERCIAL).getPoints().add(new InterestPoint(R.drawable.p_commercial_station,"Commercial Brodway Station"));
 		stations.get(COMMERCIAL).getPoints().add(new InterestPoint(R.drawable.p_commercial_driver_street,"Commercial Drive Street"));
+		stations.get(COMMERCIAL).getPoints().add(new InterestPoint(R.drawable.p_boteco_brasil,"Boteco Brasil"));
 		
 		stations.get(NANAIMO).getPoints().add(new InterestPoint(R.drawable.p_nanaimo_station,"Nanaimo Station"));
 		stations.get(NANAIMO).getPoints().add(new InterestPoint(R.drawable.p_nanaimo_street,"Nanaimo Street"));
@@ -274,6 +275,15 @@ public class Constants {
 		
 		stations.get(JOYCE).getPoints().add(new InterestPoint(R.drawable.p_joyce,"Joyce-Collingwood Station"));
 		stations.get(JOYCE).getPoints().add(new InterestPoint(R.drawable.p_vanness_ave,"Joyce-Collingwood Station at Vanness Avenuew"));
+		stations.get(JOYCE).getPoints().add(new InterestPoint(R.drawable.p_joyce_bbq,"Joyce BBQ"));
+		
+		stations.get(PATTERSON).getPoints().add(new InterestPoint(R.drawable.p_central_park,"Central Park"));
+		stations.get(PATTERSON).getPoints().add(new InterestPoint(R.drawable.p_waves_coffee_patterson,"Waves Coffee Shop"));
+		
+		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_metrotown,"Metropolis Mall"));
+		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_bestbuy,"Best Buy"));
+		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_burnaby_public_library,"Burnaby Public Library"));
+		
 		
 	}
 	

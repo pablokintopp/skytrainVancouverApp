@@ -36,6 +36,8 @@ public class StationActivity extends Activity {
 		gallery = (Gallery) findViewById(R.id.galleryPoints);
 		image = (ImageView) findViewById(R.id.imageViewZoom);
 		
+		image.setMinimumWidth(500);
+		image.setMinimumHeight(500);
 		
 		title.setText(station.getName());
 		

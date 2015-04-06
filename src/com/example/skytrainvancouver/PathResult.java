@@ -19,7 +19,7 @@ public class PathResult extends Activity {
 	ListView listView;
 	ArrayAdapter<String> adapter;
 	TextView txtTitle, txtTime, txtPrice;
-	boolean zones[]={false,false,false};
+	boolean zones[]={false,false,false,false}; // 0 ==airport , zone 1 , 2 , 3
 	double zonePrice[];
 	int timeStoped;
 	
@@ -30,10 +30,11 @@ public class PathResult extends Activity {
 		setContentView(R.layout.activity_result_path);
 		
 		pathStation = new ArrayList<Station>();
-		zonePrice = new double[3];
-		zonePrice[0] = 2.75;
-		zonePrice[1] = 4;
-		zonePrice[2] = 5.5;
+		zonePrice = new double[4];
+		zonePrice[0] = 5; //airport zone tax for leaving the area
+		zonePrice[1] = 2.75; // zone 1
+		zonePrice[2] = 4;
+		zonePrice[3] = 5.5;
 		
 		
 		txtTitle = (TextView) findViewById(R.id.textViewInfo);
@@ -89,9 +90,13 @@ public class PathResult extends Activity {
 	
 	private String loadPrice() {
 		double total = 0;
-		for(int i = 0; i< 3 ; i++)
+		for(int i = 1; i< 4 ; i++)
 		if(zones[i])
 			total+=zonePrice[i];	
+		
+		if(zones[0] == true && pathStation.get(pathStation.size()-1).getFareZone()!= 0)
+			total+=zonePrice[0];
+		
 		return "$"+String.valueOf(total);
 	}
 

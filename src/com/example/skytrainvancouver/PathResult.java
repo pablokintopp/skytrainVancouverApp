@@ -32,9 +32,9 @@ public class PathResult extends Activity {
 		pathStation = new ArrayList<Station>();
 		zonePrice = new double[4];
 		zonePrice[0] = 5; //airport zone tax for leaving the area
-		zonePrice[1] = 2.75; // zone 1
-		zonePrice[2] = 4;
-		zonePrice[3] = 5.5;
+		zonePrice[1] = 2.75; // pass by 1 zone
+		zonePrice[2] = 4; // pass by 2 zones
+		zonePrice[3] = 5.5;  // pass by 3 zones
 		
 		
 		txtTitle = (TextView) findViewById(R.id.textViewInfo);
@@ -89,10 +89,13 @@ public class PathResult extends Activity {
 
 	
 	private String loadPrice() {
-		double total = 0;
+		double total =0;
+		int totalIndex = 0;
 		for(int i = 1; i< 4 ; i++)
 		if(zones[i])
-			total+=zonePrice[i];	
+			totalIndex++;
+		if(totalIndex>0)
+			total = zonePrice[totalIndex];
 		
 		if(zones[0] == true && pathStation.get(pathStation.size()-1).getFareZone()!= 0)
 			total+=zonePrice[0];

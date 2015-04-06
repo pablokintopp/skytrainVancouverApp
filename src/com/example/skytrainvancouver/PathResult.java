@@ -17,7 +17,7 @@ public class PathResult extends Activity {
 	int origin, destination;
 	ArrayList<String> stationNames;
 	ListView listView;
-	ArrayAdapter<String> adapter;
+	CustomAdapter adapter;
 	TextView txtTitle, txtTime, txtPrice;
 	boolean zones[]={false,false,false,false}; // 0 ==airport , zone 1 , 2 , 3
 	double zonePrice[];
@@ -62,7 +62,7 @@ public class PathResult extends Activity {
 		
 		//setting the names on the listView
 		listView = (ListView) findViewById(R.id.listViewResult);
-		adapter = new ArrayAdapter<String>(this, R.layout.list_view_design, R.id.txtStationName, stationNames);
+		adapter = new CustomAdapter(this, R.layout.list_view_design, pathStation);
 
 		listView.setAdapter(adapter);
 		

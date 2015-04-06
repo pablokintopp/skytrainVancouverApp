@@ -60,5 +60,19 @@ public class Station {
 		return "Zone: "+getFareZone()+" "+lines;
 	}
 	
+	public String showLines(){
+		String a ="";
+		for(int i = 0 ; i< line.length ;i++){
+			if(i>0)
+				a+=" | ";
+			a+=line[i].substring(0, 3);
+			
+			
+		}
+		
+		
+		return a;
+	}
+	
 
 }

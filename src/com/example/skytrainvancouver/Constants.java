@@ -2,6 +2,8 @@ package com.example.skytrainvancouver;
 
 import java.util.ArrayList;
 
+import android.provider.Telephony.Mms.Addr;
+
 public class Constants {
 	
 	public static ArrayList<Station> stations = new ArrayList<Station>();
@@ -283,6 +285,88 @@ public class Constants {
 		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_metrotown,"Metropolis Mall"));
 		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_bestbuy,"Best Buy"));
 		stations.get(METROTOWN).getPoints().add(new InterestPoint(R.drawable.p_burnaby_public_library,"Burnaby Public Library"));
+		
+		stations.get(ROYAL_OAK).getPoints().add(new InterestPoint(R.drawable.p_metrotown_royal_oak,"Metrotown Madza"));
+		
+		stations.get(EDMONDS).getPoints().add(new InterestPoint(R.drawable.p_edmonds,"Edmonds Station"));
+		
+		stations.get(_22STREET).getPoints().add(new InterestPoint(R.drawable.p_22th_station,"22th Street Station"));
+		stations.get(_22STREET).getPoints().add(new InterestPoint(R.drawable.p_queensborough_landing,"Queensborough Lading Outlet"));
+		
+		stations.get(COLUMBIA).getPoints().add(new InterestPoint(R.drawable.p_okonomi_sushi,"Okonomi Sushi"));
+		stations.get(COLUMBIA).getPoints().add(new InterestPoint(R.drawable.p_queens_park,"Queens Park"));
+		
+		stations.get(SAPPERTON).getPoints().add(new InterestPoint(R.drawable.p_royal_columbian_hospital,"Royal Columbian Hospital"));
+		
+		stations.get(BRAID).getPoints().add(new InterestPoint(R.drawable.p_braid,"Braid Station"));
+		stations.get(BRAID).getPoints().add(new InterestPoint(R.drawable.p_hume_park_braid,"Hume Park"));
+		
+		stations.get(LOUGHEED).getPoints().add(new InterestPoint(R.drawable.p_lougheed_towncenter,"Lougheed Towncenter Mall"));
+		stations.get(LOUGHEED).getPoints().add(new InterestPoint(R.drawable.p_foggy_dew,"Foggy Dew"));
+		stations.get(LOUGHEED).getPoints().add(new InterestPoint(R.drawable.p_coquitlam_college,"Coquitlam College"));
+		
+		stations.get(PRODUCTION_WAY).getPoints().add(new InterestPoint(R.drawable.p_burnaby_200_area_conservation,"Burnaby 200 area Conservation"));
+		stations.get(PRODUCTION_WAY).getPoints().add(new InterestPoint(R.drawable.p_simon_fraser,"Simon Fraser University"));
+		
+		stations.get(LAKE_CITY).getPoints().add(new InterestPoint(R.drawable.p_burnaby_lake,"Burnaby Lake"));
+		stations.get(LAKE_CITY).getPoints().add(new InterestPoint(R.drawable.p_burnaby_mountain_golf,"Burnaby Mountain Golf"));
+		
+		stations.get(SPERLING).getPoints().add(new InterestPoint(R.drawable.p_sperling_elementary_school,"Sperling Elementary School"));
+		
+		stations.get(BRENTWOOD).getPoints().add(new InterestPoint(R.drawable.p_brentwood_town_center,"Brentwood Town Center Mall"));
+		stations.get(BRENTWOOD).getPoints().add(new InterestPoint(R.drawable.p_british_columbia_institute_of_technology,"British Columbia Institute of Technology"));
+		
+		stations.get(RUPERT).getPoints().add(new InterestPoint(R.drawable.p_thunderbird_elementary_school,"Thunderbird Elementary School"));
+		
+		stations.get(VCC_CLARK).getPoints().add(new InterestPoint(R.drawable.p_vcc,"vancouver community college"));
+		
+		stations.get(KING_GEORGE).getPoints().add(new InterestPoint(R.drawable.p_jim_pattison, "Jim Pattison Outpatient Care and Surgery Centre"));
+		stations.get(KING_GEORGE).getPoints().add(new InterestPoint(R.drawable.p_surrey_memorial_hospital, "Surrey Memorial Hospital"));
+		
+		stations.get(SURREY).getPoints().add(new InterestPoint(R.drawable.p_surrey_central_mall, "Surrey Central Mall"));
+		stations.get(SURREY).getPoints().add(new InterestPoint(R.drawable.p_surrey_libraries, "Surrey Libraries"));
+		
+		stations.get(SCOTT_ROAD).getPoints().add(new InterestPoint(R.drawable.p_cdi_college_scott_road, "CDI College"));
+		
+		stations.get(YALETOWN).getPoints().add(new InterestPoint(R.drawable.p_yaletown_ferry_dock, "yaletown Ferry Dock"));
+		stations.get(YALETOWN).getPoints().add(new InterestPoint(R.drawable.p_roundhouse_community_arts, "Roundhouse Community Arts & Recreation Centre"));
+		
+		stations.get(OLYMPIC).getPoints().add(new InterestPoint(R.drawable.p_olympic_village, "Olympic Village"));
+		
+		stations.get(BROADWAY_CITY_HALL).getPoints().add(new InterestPoint(R.drawable.p_vancouver_general_hospital, "Vancouver General Hospital"));
+		stations.get(BROADWAY_CITY_HALL).getPoints().add(new InterestPoint(R.drawable.p_vancouver_city_hall, "Vancouver City Hall"));
+		
+		stations.get(KING_EDWARD).getPoints().add(new InterestPoint(R.drawable.p_vancouver_olympic_centre, "Vancouver Olympic Centre"));
+		stations.get(KING_EDWARD).getPoints().add(new InterestPoint(R.drawable.p_queen_elizbeth_park, "Queen Elizabeth Park"));
+		stations.get(KING_EDWARD).getPoints().add(new InterestPoint(R.drawable.p_health_care_of_bc, "Children's & Women's Health Centre Of British Columbia"));
+		
+		stations.get(OAKRIDGE).getPoints().add(new InterestPoint(R.drawable.p_oakridge_centre,"Oakridge Centre"));
+		
+		stations.get(LANGARA).getPoints().add(new InterestPoint(R.drawable.p_langara_college,"Langara College"));
+		stations.get(LANGARA).getPoints().add(new InterestPoint(R.drawable.p_langara_golf,"Langara golf Course"));
+		
+		stations.get(ABERDEEN).getPoints().add(new InterestPoint(R.drawable.p_aberdeen_centre,"Aberdeen Centre"));
+		
+		stations.get(LANDSDOWNE).getPoints().add(new InterestPoint(R.drawable.p_lansdowne_centre,"Lansdowne Centre"));
+		
+		stations.get(RICHMOND).getPoints().add(new InterestPoint(R.drawable.p_richmond_centre,"Richmond Centre"));
+		
+		stations.get(YVR_AIRPORT).getPoints().add(new InterestPoint(R.drawable.p_yvr_airport,"Vancouver International Airport(YVR-Airport)"));
+		
+		stations.get(MOODY_CENTRE).getPoints().add(new InterestPoint(R.drawable.p_port_moody,"Port Moody"));
+		stations.get(MOODY_CENTRE).getPoints().add(new InterestPoint(R.drawable.p_port_moody_recreation_complex,"Port Moody Recreation Complex"));
+		
+		stations.get(COQUITLAM).getPoints().add(new InterestPoint(R.drawable.p_coquitlam_centre,"Coquitlam Centre"));
+		
+		stations.get(DOUGLAS_LINCOLN).getPoints().add(new InterestPoint(R.drawable.p_douglas_college_coquitlam,"Douglas College"));
+		
+		
+		
+		
+				
+		
+		
+		
 		
 		
 	}

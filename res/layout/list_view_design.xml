@@ -9,7 +9,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_height="50sp"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
         android:layout_gravity="left"
         android:layout_rowSpan="3"
         android:contentDescription="TODO"

@@ -22,7 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/textViewName"
-        android:layout_marginTop="66dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/spinner"
+        android:popupBackground="@drawable/spinnerpop"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/fareZone"
@@ -39,7 +44,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/fareZone"
-        android:layout_marginTop="83dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/spinner"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/buttonSearch"
@@ -48,8 +57,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/button"
         android:onClick="loadResultActivity"
-        android:text="Show" />
+        android:text="Show"
+        android:textColor="@android:color/white" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextViewOrigin"

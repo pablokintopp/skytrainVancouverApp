@@ -37,7 +37,7 @@ public class ShortPathStations extends Activity {
 		
 		destination.setAdapter(dataAdapter);
 		
-		ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1,stations);
+		ArrayAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,stations);
 		
 		 actvO = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextViewOrigin);
 		 actvD = (AutoCompleteTextView) findViewById(R.id.AutoCompleteTextViewDestination);
